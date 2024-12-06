@@ -1,0 +1,594 @@
+body{
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.home-screen{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    height: 10vh;
+    width: 100vw;
+}
+
+.header-content{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-title{
+    height: 90%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #00ffcc;
+    font-size: 200%;
+}
+
+/* Main section containing analysis of patient report and bio data */
+.main-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 80vh;
+    width: 100vw;
+    margin-top: 2%;
+}
+
+.patient-data-container-main{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 80vh;
+    width: 100vw;
+}
+
+.upper-portion{
+    height: 50%;
+    width: 100%;
+    display: flex;
+}
+
+.main-patient-data{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-top: 1%;
+    margin: 2%;
+}
+
+.main-toggle-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5vh;
+    height: 10%;
+    width: 100%;
+    margin-top: 1.4%;
+}
+
+.open-button{
+    width: 76%; /* Same width as the form */
+    padding: 2% 0;
+    background-color: #00ffcc;
+    color: #1e1e1e;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 25%;
+    font-size: 50%;
+}
+
+.open-button button{
+    font-size: 100%;
+}
+
+.patient-data{
+    height: 90%;
+    width: 76%;
+    border-radius: 5%;
+    margin-left: 12%;
+    margin-top: 6%;
+    display: flex;
+    flex-direction: column;
+}
+
+#detailsForm{
+    height: 100%;
+    width: 100%;
+    border-radius: 5%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Centered header styling */
+h2 {
+    text-align: center;
+    color: #00ffcc;
+    margin-top: 20px;
+}
+
+/* Form styling - left-aligned */
+form {
+    max-width: 90%; /* Ensure responsiveness */
+    width: 300px; /* Default width */
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    margin-left: 50px; /* Left alignment */
+    margin-top: 20px;
+}
+
+/* Label and input field styling */
+label {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 8px;
+    color: #b0b0b0;
+}
+
+#text-box{
+    width: 94%;
+}
+
+input, select {
+    width: 100%; /* Input fields take full width of form */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+/* Submit button styling */
+button {
+    width: 100%; /* Submit button matches form width */
+    padding: 10px;
+    background-color: #00ffcc;
+    color: #1e1e1e;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #00cc99;
+}
+
+/* Button to toggle form - left-aligned */
+.open-button:hover {
+    background-color: #00cc99;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    color: #808080;
+    padding: 10px;
+}
+
+/* Graph section styling */
+.graph-section {
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    margin: 2%;
+    background-color: yellow;
+}
+
+#graphImage {
+    width: 100%; /* Adjust size to fit half of the right half of the webpage */
+    height: auto; /* Maintain aspect ratio */
+}
+
+@media (max-width: 600px) {
+    header {
+      height: calc(10vh - 2vw); /* Decreases height as width shrinks */
+      padding: 0 5px; /* Small padding to maintain spacing */
+    }
+  
+    .header-content {
+      flex-direction: column; /* Stack elements vertically */
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .header-title {
+      width: 90%; /* Full width for small screens */
+      font-size: clamp(1rem, 5vw, 2rem); /* Font size scales between 1rem and 2rem */
+      text-align: center;
+    }
+
+    .main-section {
+        flex-direction: column; /* Stack items vertically */
+        justify-content: center; /* Center vertically */
+        align-items: center; /* Center horizontally */
+        height: auto; /* Let content determine height */
+        width: 100%; /* Ensure full width */
+        margin-top: 5%; /* Add more space at the top */
+        padding: 10px; /* Add padding for spacing */
+    }
+
+    .patient-data-container-main {
+        flex-direction: column; /* Stack child elements vertically */
+        height: auto; /* Adjust height based on content */
+        padding: 10px; /* Add padding for spacing */
+    }
+      
+    .upper-portion {
+        flex-direction: column; /* Stack elements vertically */
+        height: auto; /* Let the content determine height */
+        width: 100%; /* Ensure full width */
+    }
+      
+    .main-patient-data {
+        width: 100%; /* Use full width on small screens */
+        margin: 5px 0; /* Reduce margin for a compact layout */
+        padding-top: 5px; /* Adjust padding for spacing */
+    }
+    
+    .main-toggle-button {
+        font-size: 3vh; /* Reduce font size for smaller screens */
+        height: auto; /* Let content adjust the height */
+        width: auto;
+        margin-top: 5px; /* Adjust margin for better fit */
+    }
+    
+      .open-button {
+        width: 90%; /* Increase width for better usability */
+        padding: 5px 0; /* Adjust padding for smaller screens */
+        font-size: 3vw; /* Use viewport width for scalable font size */
+      }
+    
+      .open-button button {
+        font-size: 1rem; /* Ensure consistent button text size */
+      }
+    
+      .patient-data {
+        width: 90%; /* Adjust to occupy most of the screen */
+        height: auto; /* Let content control height */
+        margin-left: 5%; /* Center align with smaller margins */
+        margin-top: 10px; /* Reduce margin for compact layout */
+        border-radius: 10px; /* Smaller border radius for mobile */
+      }
+
+      #detailsForm {
+        width: 90%; /* Full width on smaller screens */
+        padding: 10px; /* Adequate padding for compact layout */
+        margin: 0 auto; /* Centering the form */
+        border-radius: 5px; /* Slight adjustment */
+      }
+    
+      /* Adjust input fields and select boxes */
+      input, select {
+        width: 100%; /* Full width */
+        padding: 8px; /* Reduce padding for compactness */
+        font-size: 1rem; /* Adjust font size */
+      }
+    
+      /* Adjust the button styling */
+      button[type="submit"] {
+        font-size: 1rem; /* Ensure readable font size */
+        padding: 10px; /* Compact padding */
+        width: 100%; /* Full width for button */
+      }
+    
+      .open-button {
+        font-size: 1rem; /* Adjust font size of the toggle button */
+        padding: 10px; /* Compact padding */
+        width: 100%; /* Full width */
+      }
+    
+      /* Adjust heading */
+      h2 {
+        font-size: 1.5rem; /* Slightly smaller heading */
+        margin-top: 10px;
+      }
+    
+      /* Adjust label styling */
+      label {
+        font-size: 14px; /* Smaller font for labels */
+        margin-bottom: 5px;
+      }
+    
+      /* Adjust image container for graph */
+      .graph-section img {
+        width: 100%; /* Make the image responsive */
+        height: auto; /* Maintain aspect ratio */
+      }
+    
+      /* Optional: Adjust the graph section container */
+      .graph-section {
+        width: 100%; /* Full width of the container */
+        margin-top: 10px; /* Add spacing for separation */
+      }
+
+
+}  
+  
+  /* Tablet styles */
+  @media (min-width: 601px) and (max-width: 1024px) {
+        /* Header styling */
+        header {
+            height: 10vh;
+            width: 100%;
+        }
+    
+        /* Center the header content */
+        .header-content {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        /* Header title styling */
+        .header-title {
+            height: 90%;
+            width: 50%; /* Adjust width to fit better on laptop screens */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #00ffcc;
+            font-size: 5vw; /* Adjust font size relative to the width of the viewport */
+        }
+    
+        /* Adjust font size for smaller devices */
+        @media (max-width: 1024px) {
+            .header-title {
+                font-size: 6vw; /* Slightly smaller font for smaller laptop screens */
+            }
+        }
+    
+        /* Adjust header content layout for better responsiveness */
+        .header-title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    /* Adjust the form container */
+    /* Container holding upper and lower portions */
+  .patient-data-container-main {
+    display: flex;
+    flex-direction: column; /* Stack the sections vertically */
+    height: 80vh; /* Adjust height to fit within the viewport */
+  }
+
+  .upper-portion, .lower-portion {
+        height: 50%; /* Each portion takes 50% of the height */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Adjust patient data container */
+    .main-patient-data {
+        width: 45%; /* Make it occupy 45% of the width */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin: 0; /* Remove margin */
+        height: 90%;
+    }
+    /* Adjust graph section */
+    .graph-section {
+        width: 50%; /* Take the remaining 50% */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+  /* Adjust form visibility and style */
+  #detailsForm {
+    width: 80%;
+    padding: 15px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 5px;
+    background-color: #2a2a2a;
+  }
+
+  /* Toggle button */
+  .main-toggle-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    height: 10%;
+    width: 100%;
+    margin-top: 1.4%;
+  }
+
+  /* Submit button */
+  button[type="submit"] {
+    font-size: 1rem;
+    padding: 12px;
+    width: 100%;
+  }
+
+  /* Adjust heading font size */
+  h2 {
+    font-size: 1.8rem;
+    margin-top: 15px;
+  }
+
+  /* Patient data store and foot image containers */
+  .patient-data-store-container, .patient-foot-image-container {
+    width: 48%; /* Allow these containers to take up almost equal space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .upper-portion, .lower-portion {
+    height: 50%; /* Each portion takes 50% of the height */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Patient data container */
+.main-patient-data {
+    width: 45%;
+    height: 100%; /* Full height of the upper-portion */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center the form */
+    padding: 10px;
+}
+
+/* Form container */
+form {
+    width: 90%; /* Make the form responsive */
+    max-width: 400px; /* Prevent it from being too wide */
+    background-color: #2a2a2a;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align input fields */
+}
+
+label {
+    font-size: 14px; /* Adjust label size for smaller screens */
+    color: #b0b0b0;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+/* Adjust the submit button */
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #00ffcc;
+    color: #1e1e1e;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #00cc99;
+}
+
+/* Toggle button styling */
+.open-button {
+  width: 200px; /* Fixed width for consistency */
+  max-width: 90%; /* Ensures the button doesn't exceed container width */
+  padding: 12px; /* Add comfortable padding */
+  font-size: 16px; /* Adjust font size for better readability */
+  margin: 10px auto; /* Center the button with space around */
+  background-color: #00ffcc; /* Consistent theme color */
+  color: #1e1e1e; /* Dark text for contrast */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.open-button:hover {
+    background-color: #00cc99;
+}
+
+.patient-data {
+    width: 100%; /* Use the full width of the container */
+    margin: 0;
+    padding: 0;
+}
+
+/* Adjust graph section */
+.graph-section {
+    width: 50%; /* Take the remaining 50% */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#graphImage {
+    width: 100%; /* Graph takes the full width */
+    height: auto; /* Maintain aspect ratio */
+    background-color: yellow; /* Demo background */
+}
+
+/* Header styling for responsiveness */
+header {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-content {
+    width: 100%;
+    text-align: center;
+}
+
+.header-title {
+    font-size: 3vw; /* Scales title size dynamically */
+    color: #00ffcc;
+    text-align: center;
+}
+
+/* Form adjustments for responsiveness */
+form {
+    width: 90%; /* Make it responsive within patient data */
+    margin: auto;
+}
+
+input, select {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+button {
+    width: 100%;
+}
+
+  }
+  
+  
+  /* Desktop styles */
+  @media (min-width: 1025px) {
+    
+  }
+  
